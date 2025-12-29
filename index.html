@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/GAMING ZONE.png" type="image/x-icon">
+    <title>BGAME</title>
+</head>
+<body id="body">
+    <header>
+        <div class="img-logo">
+            <!-- <a href="index.html"><img src="img/LOGO BGAME.png" alt="Logo Bgame" height="40,064" width="250"></a> -->
+            <a href="index.html" style="color: white; font-size: 50px;">BGAME</a>
+        </div>
+        <nav class="nav-header">
+            <ul class="liste-nav-header">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="reserve.html">Réservation</a></li>
+                <li><a href="about.html">About us</a></li>
+            </ul>
+        </nav>
+        <div class="btn-header">
+            <button type="button"><a href="https://wa.me/224627369541" class="whatsapp">Whatsapp</a></button>
+            <button type="button"><a href="tel:+224627369541" class="tel">Téléphone</a></button>
+        </div>
+        <div>
+            <button type="button" id="mode">Clair</button>
+        </div>
+    </header>
+
+    <section class="sect-1">
+        <div class="hero">
+            <h1>Bienvenue Sur Votre Espace de Jeux moderne BGAME</h1>
+            <div class="hero-img">
+                <img src="img/psvr-product-thumbnail-01-en-14sep21.png" alt="" >
+            </div>
+        </div>
+
+        <div>
+            <div class="jeux">
+                <div class="cardJeux">
+                    <div class="titleJeux">
+                        <img src="img/ea-sports-fc-26-devrait-sortir-le-26-septembre-prochain-cover68778afd733aa.jpg" alt="name of matérial">
+                    </div>
+                    <p>FC26</p>
+                </div>
+                <div class="cardJeux">
+                    <div class="titleJeux">
+                        <img src="img/Grand_Theft_Auto_V_Logo.svg.png" alt="name of matérial">
+                    </div>
+                    <p>GTA V</p>
+                </div>
+                <div class="cardJeux">
+                    <div class="titleJeux">
+                        <img src="img/Mortal_Kombat_11_cover_art.png" alt="name of matérial">
+                    </div>
+                    <p>MK 11</p>
+                </div>  
+            </div>
+            <button type="button" class="more-game">Voir plus.</button>
+        </div>
+
+        <div class="infoForm">
+            <div class="info">
+                <h2>Tarification</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>N°</th>
+                            <th>Console</th>
+                            <th>Jeux</th>
+                            <th>Accessoire</th>
+                            <th>Temps</th>
+                            <th>Prix</th>    
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>PS4</td>
+                            <td>
+                                <select name="jeuxTable" id="jeuxTable">
+                                    <option value="fc26">FC26</option>
+                                    <option value="gta5">GTA v</option>
+                                    <option value="mk11">Mortal Kombat 11</option>
+                                    <option value="box">Box (VR obligatoire)</option>
+                                    <option value="jeuxHauteur">Jeux de Hauteur (VR obligatoire)</option>
+                                    <option value="bestBear">Best Bear (VR obligatoire)</option>
+                                    <option value="tirMove">Jeux de Tir (VR obligatoire)</option>
+                                    <option value="courseVoiture">Course de Voiture</option>
+                                    <option value="courseVelo">Course de Velo</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="accessoireTablePs4" id="accessoireTablePs4">
+                                    <option value="2Manette">2 Manette</option>
+                                    <option value="4Manette">4 Mannette</option>
+                                    <option value="psvr">Caste VR + Manette</option>
+                                    <option value="psvrMotion">Caste VR + Motion Controller</option>
+                                    <option value="motionController">Motion Controller</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="number" value="5" min="5" max="100" id="minutePs4"> <label for="numberPs4">Minutes</label>
+                            </td>
+                            <td id="totalTablePs4" style="font-weight: bold;"></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>2</td>
+                            <td>PS2</td>
+                            <td>
+                                <select name="jeuxTable2" id="jeuxTable2">
+                                    <option value="pes25">PES25</option>
+                                    <option value="gta">GTA San Adreas</option>
+                                    <option value="courseVelo">Course de Velo</option>
+                                    <option value="courseVoiture">Course de Voiture</option>
+                                    <option value="godHand">God Hand</option>
+                                    <option value="godOfWar">God Of War</option>
+
+                                </select>
+                            </td>
+                            <td>
+                                <select name="accessoireTablePs2" id="accessoireTablePs2">
+                                    <option value="1Manette">1 Manette</option>
+                                    <option value="2Manette">2 Mannette</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="number" value="10" min="10" max="100" id="minutePs2"> <label for="numberPs2">Minute</label>
+                            </td>
+                            <td id="totalTablePs2" style="font-weight: bold;"></td>
+                        </tr>
+
+                        
+                    </tbody>
+                </table>
+            </div>
+            <form action="" method="post">
+                <h2>Réservation</h2>
+
+                <label for="console">Choisir la console : </label> <br>
+                <select name="console" id="console" required>
+                    <option value="">~~ Choix de la console ~~</option>
+                    <option value="ps4">playstation 4 </option>
+                    <option value="ps2">playstation 2 </option>
+                </select> <br><br>
+
+                <label for="jeux">Choisir le jeux : </label> <br>
+                <select name="jeux" id="jeux" required>
+                    <option value="">~~ Choix du jeux ~~</option>
+                    <option value="fc26">FC26</option>
+                    <option value="gta">GTA 5</option>
+                    <option value="mk11">Mortal Komba 11</option>
+                </select> <br><br>
+
+                <label for="accessoire">Ajouter un accessoire ?</label> <br>
+                <select name="accessoire" id="accessoire" required>
+                    <option value="">~~ Choix d'un accessoire ~~</option>
+                    <option value="psvr">PSVR</option>
+                </select><br><br>
+
+                <label for="manette">Nombre de manette :</label>
+                <input type="number" name="nbreManette" id="nbreManette" min="1" max="4" value="1" required><br><br>
+
+                <label for="tempsJeux">Temps de jeux (en minute) :</label>
+                <input type="number" name="tempsJeux" id="tempsJeux" min="5" max="180" value="5" required><br><br>
+
+                <label for="date">Date de réservation :</label>
+                <input type="date" name="date" id="date" required><br><br>
+
+                <label for="heure" id="heureArrive">Heure d'arrivée</label>
+                <input type="time" name="heureArrive" id="heureArrive" required><br><br>
+
+                <P id="totalReservation" style="color: green; font-weight: bold;">Montant de la réservation: </P><br>
+
+                <p><strong style="color: red;">(Attention): Vous payer à la reservation et le montant n'est pas remboursable ...</strong></p>
+
+                <button type="submit" class="reserver">RESERVER</button>
+
+            </form>
+        </div>
+        
+        <div>
+            <div class="material">
+                <div class="cardmaterial">
+                    <div class="titlematerial">
+                        <img src="img/PS4.png" alt="name of matérial">
+                    </div>
+                    <p>PS4</p>
+                </div>
+                <div class="cardmaterial">
+                    <div class="titlematerial">
+                        <img src="img/psvr-product-thumbnail-01-en-14sep21.png" alt="name of matérial">
+                    </div>
+                    <p>PSVR</p>
+                </div>
+                <div class="cardmaterial">
+                    <div class="titlematerial">
+                        <img src="img/PS2.png" alt="name of matérial">
+                    </div>
+                    <p>PS2</p>
+                </div>  
+            </div>
+            <button type="button" class="more-material">Voir plus.</button>
+        </div>
+    
+        <footer>
+            &copy; BGAME tous droit réserver
+        </footer>
+    </section>
+    
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+{ 
+    "ps4" : {
+        "fc26": {
+            "2Manette": 200,
+            "4Manette": 400,
+            "psvr": 600,
+            "psvrMotion": 800,
+            "motionController": 800
+        },
+        "gta5": {
+            "2Manette": 400,
+            "4Manette": 0,
+            "psvr": 600,
+            "psvrMotion": 0,
+            "motionController": 0
+        },
+        "mk11": {
+            "2Manette": 400,
+            "4Manette": 0,
+            "psvr": 600,
+            "psvrMotion": 0,
+            "motionController": 0
+        },
+        "box": {
+            "2Manette": 0,
+            "4Manette": 0,
+            "psvr": 800,
+            "psvrMotion": 800,
+            "motionController": 800
+        },
+        "jeuxHauteur": {
+            "2Manette": 0,
+            "4Manette": 0,
+            "psvr": 400,
+            "psvrMotion": 600,
+            "motionController": 600
+        },
+        "bestBear": {
+            "2Manette": 0,
+            "4Manette": 0,
+            "psvr": 700,
+            "psvrMotion": 700,
+            "motionController": 700
+        },
+        "tirMove": {
+            "2Manette": 0,
+            "4Manette": 0,
+            "psvr": 1000,
+            "psvrMotion": 1000,
+            "motionController": 1000
+        },
+        "courseVoiture": {
+            "2Manette": 200,
+            "4Manette": 400,
+            "psvr": 600,
+            "psvrMotion": 0,
+            "motionController": 0
+        },
+        "courseVelo": {
+            "2Manette": 200,
+            "4Manette": 400,
+            "psvr": 600,
+            "psvrMotion": 0,
+            "motionController": 0
+        }
+    },
+    "ps2" : {
+        "pes25": {
+            "1Manette": 100,
+            "2Manette": 100
+        },
+        "gta": {
+            "1Manette": 200,
+            "2Manette": 0
+        },
+        "courseVelo": {
+            "1Manette": 200,
+            "2Manette": 200
+        },
+        "courseVoiture": {
+            "1Manette": 200,
+            "2Manette": 200
+        },
+        "godHand": {
+            "1Manette": 200,
+            "2Manette": 0
+        },
+        "godOfWar": {
+            "1Manette": 200,
+            "2Manette": 0
+        }
+    }
+}

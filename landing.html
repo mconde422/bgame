@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/GAMING ZONE.png" type="image/x-icon">
+    <title>BGAME</title>
+    <style>
+        .landImg{
+            width: 100%;
+            text-align: center;
+        }
+        .landImg img{
+            height: 35%;
+            width: 35%;
+            object-fit: cover;
+            animation: rotateLogo 3s ease-out infinite;
+            margin-bottom: 10px;
+        }
+        h1 {
+            font-size: 3em;
+        }
+        @keyframes rotateLogo {
+            from{
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body id="body">
+
+    <div class="landImg">
+        <img src="img/GAMING ZONE.png" alt="Logo" class="logo">
+        <h1>Bienvenue Sur BGame ...</h1>
+        <button type="button" class="start" id="start"><a href="index.html">COMMENCER</a></button>
+    </div>
+
+
+        <script src="script.js"></script>
+</body>
+</html>
