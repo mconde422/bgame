@@ -1,0 +1,330 @@
+/* =========================
+   RESET & VARIABLES
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --primary: #0e212e;
+  --secondary: #3FA9F5;
+  --dark: #ffffff;
+  --text: #ffffff;
+  --bg-card: #122b3a;
+  --radius: 16px;
+}
+
+.light {
+  --primary: #ffffff;
+  --dark: #0e212e;
+  --text: #0e212e;
+  --bg-card: #f1f1f1;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--primary);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* cacher scrollbar */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================
+   HEADER (MOBILE)
+========================= */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  /* flex-direction: column; */
+  gap: 5px;
+
+  padding: 12px;
+  background: var(--secondary);
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a {
+  color: #ffffff;
+  font-weight: bold;
+}
+.hidden {
+  display: none;
+}
+
+.nav-header ul {
+  display: flex;
+  /* flex-direction: column; */
+  gap: 15px;
+}
+
+.btn-header {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+header button {
+  border: none;
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: bold;
+}
+header .whatsapp {
+  background: #25d366;
+}
+header .tel {
+  background: #0e4366;
+}
+/* =========================
+   SECTION PRINCIPALE
+========================= */
+.sect-1 {
+  padding-top: 60px;
+  padding-inline: 12px;
+}
+
+/* =========================
+   HERO (MOBILE)
+========================= */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.hero-img img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+/* =========================
+   JEUX & MATÉRIEL (MOBILE)
+========================= */
+.jeux,
+.material {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.cardJeux,
+.cardmaterial {
+  background: var(--bg-card);
+  padding: 10px;
+  border-radius: var(--radius);
+}
+
+.cardJeux img,
+.cardmaterial img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.cardJeux p,
+.cardmaterial p {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+/* =========================
+   BOUTONS
+========================= */
+.more-game,
+.more-material,
+.reserver {
+  margin: 20px auto;
+  display: block;
+  width: 90%;
+  max-width: 300px;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* =========================
+   TABLE & FORM (MOBILE)
+========================= */
+.infoForm {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.info,
+form {
+  width: 100%;
+}
+
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-scroll table {
+  min-width: 700px; /* force le scroll */
+  border-collapse: collapse;
+}
+
+.table-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+  background: #3FA9F5;
+  border-radius: 10px;
+}
+
+
+table {
+  border-collapse: collapse;
+  overflow-x: auto;
+  width: auto;
+  max-width: 100%;
+  table-layout: auto;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  font-size: 14px;
+}
+
+thead {
+  background: var(--secondary);
+  color: white;
+}
+
+form {
+  background: var(--secondary);
+  color: #0e212e;
+  padding: 20px;
+  border-radius: var(--radius);
+}
+
+form input,
+form select {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  border-radius: var(--radius);
+  border: none;
+  padding: 8px;
+}
+
+/* =========================
+   FOOTER (MOBILE)
+========================= */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background: #011616;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-links a {
+  color: var(--dark);
+}
+
+/* =========================
+   DESKTOP & TABLET
+========================= */
+@media (min-width: 768px) {
+    .hidden {
+    display: inline;
+}
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-header ul {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+
+  .hero > * {
+    width: 50%;
+  }
+
+  .jeux,
+  .material {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+  }
+
+  .cardJeux,
+  .cardmaterial {
+    width: 30%;
+  }
+
+  .infoForm {
+    flex-direction: row;
+  }
+
+  .info {
+    width: 70%;
+  }
+
+  form {
+    width: 30%;
+  }
+
+  .footer-links {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 1024px) {
+  .table-scroll {
+    overflow-x: visible;
+  }
+
+  .table-scroll table {
+    min-width: 100%;
+  }
+
+}
+    

@@ -1,25 +1,25 @@
 let mode = document.getElementById('mode')
 let body = document.getElementById('body')
-let saveTheme = localStorage.getItem("light")
+let saveTheme = localStorage.getItem("theme")
 let start = document.getElementById('start')
 updateMode()
 
 
-if (saveTheme = "light") {
+if (saveTheme === "light") {
     body.classList.add('light')
 }
 
 function updateMode() {
     if (body.classList.contains('light')) {
-        mode.textContent = "Sombre"
+        mode.innerHTML = "<i class='fi fi-rr-moon-stars'></i>"
     } else {
-        mode.textContent = "light"
+        mode.innerHTML = "<i class='fi fi-rr-sun'></i>"
     }
 }
 
 mode.addEventListener('click', () =>{
     body.classList.toggle("light")
-    body.style = "transition: 2s;"
+    body.style.transition = "2s";
     if (body.classList.contains('light')) {
         localStorage.setItem("theme", "light")
     } else {
@@ -95,9 +95,9 @@ function prix() {
         return
     }
     const tarifMinute = tarifs[jeux][accessoire]    
-    const total = tarifMinute*minutePs4Select
+    const total = tarifMinute * Number(minutePs4Select)
     
-    totalPs4.textContent = total.toLocaleString() + "" + "FG"  
+    totalPs4.textContent = total.toLocaleString() + " FG"  
     
     const jeux2 = jeuxSelect2
     const accessoire2 = accessoireSelect2
@@ -108,7 +108,7 @@ function prix() {
         return
     }
     const tarifMinute2 = tarifs2[jeux2][accessoire2]    
-    const total2 = tarifMinute2*minutePs2Select
+    const total2 = tarifMinute2 * Number(minutePs2Select)
     totalPs2.textContent = total2.toLocaleString() + "" + "FG" 
 }
 
@@ -116,8 +116,8 @@ let inputDate = document.getElementById('date')
 
 const today = new Date().toISOString().split('T')[0]
 
-inputDate.value = today 
-inputDate.min = today
+inputDate.value = today;
+inputDate.min = today;
 
 
 

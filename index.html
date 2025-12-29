@@ -3,33 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
     <link rel="shortcut icon" href="img/GAMING ZONE.png" type="image/x-icon">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css'>
     <title>BGAME</title>
 </head>
 <body id="body">
     <header>
         <div class="img-logo">
             <!-- <a href="index.html"><img src="img/LOGO BGAME.png" alt="Logo Bgame" height="40,064" width="250"></a> -->
-            <a href="index.html" style="color: white; font-size: 50px;">BGAME</a>
+            <a href="index.html" style="color: white;">BGAME</a>
         </div>
         <nav class="nav-header">
             <ul class="liste-nav-header">
-                <li><a href="index.html"> <i class="fi fi-rr-home"></i></a></li>
-                <li><a href="games.html"><i class="fi fi-rr-console-controller"></i></a></li>
-                <li><a href="reserve.html"><i class="fi fi-rr-reservation-smartphone"></i></a></li>
-                <li><a href="about.html"><i class="fi fi-rr-book-user"></i></a></li>
+                <li><a href="index.html"> <i class="fi fi-rr-home"></i><span class="hidden">Home</span></a></li>
+                <li><a href="games.html"><i class="fi fi-rr-console-controller"></i><span class="hidden">Jeux</span></a></li>
+                <li><a href="reserve.html"><i class="fi fi-rr-reservation-smartphone"></i><span class="hidden">Réservation</span></a></li>
+                <li><a href="about.html"><i class="fi fi-rr-book-user"></i><span class="hidden">À propos</span></a></li>
             </ul>
         </nav>
         <div class="btn-header">
-            <button type="button"><a href="https://wa.me/224627369541" class="whatsapp">Whatsapp</a></button>
-            <button type="button"><a href="tel:+224627369541" class="tel">Téléphone</a></button>
+            <button type="button" class="whatsapp"><a href="https://wa.me/224627369541"><i class="fi fi-brands-whatsapp"></i>  <span class="hidden">Whatsapp</span></a></button>
+            <button type="button" class="tel"><a href="tel:+224627369541"><i class="fi fi-rr-phone-call"></i> <span class="hidden">Téléphone</span></a></button>
         </div>
         <div>
             <button type="button" id="mode">Clair</button>
         </div>
     </header>
+    
 
     <section class="sect-1">
         <div class="hero">
@@ -65,79 +67,92 @@
 
         <div class="infoForm">
             <div class="info">
-                <h2>Tarification</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>N°</th>
-                            <th>Console</th>
-                            <th>Jeux</th>
-                            <th>Accessoire</th>
-                            <th>Temps</th>
-                            <th>Prix</th>    
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>PS4</td>
-                            <td>
-                                <select name="jeuxTable" id="jeuxTable">
-                                    <option value="fc26">FC26</option>
-                                    <option value="gta5">GTA v</option>
-                                    <option value="mk11">Mortal Kombat 11</option>
-                                    <option value="box">Box (VR obligatoire)</option>
-                                    <option value="jeuxHauteur">Jeux de Hauteur (VR obligatoire)</option>
-                                    <option value="bestBear">Best Bear (VR obligatoire)</option>
-                                    <option value="tirMove">Jeux de Tir (VR obligatoire)</option>
-                                    <option value="courseVoiture">Course de Voiture</option>
-                                    <option value="courseVelo">Course de Velo</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select name="accessoireTablePs4" id="accessoireTablePs4">
-                                    <option value="2Manette">2 Manette</option>
-                                    <option value="4Manette">4 Mannette</option>
-                                    <option value="psvr">Caste VR + Manette</option>
-                                    <option value="psvrMotion">Caste VR + Motion Controller</option>
-                                    <option value="motionController">Motion Controller</option>
-                                </select>
-                            </td>
-                            <td>
-                                <input type="number" value="5" min="5" max="100" id="minutePs4"> <label for="numberPs4">Minutes</label>
-                            </td>
-                            <td id="totalTablePs4" style="font-weight: bold;"></td>
-                        </tr>
-                        
-                        <tr>
-                            <td>2</td>
-                            <td>PS2</td>
-                            <td>
-                                <select name="jeuxTable2" id="jeuxTable2">
-                                    <option value="pes25">PES25</option>
-                                    <option value="gta">GTA San Adreas</option>
-                                    <option value="courseVelo">Course de Velo</option>
-                                    <option value="courseVoiture">Course de Voiture</option>
-                                    <option value="godHand">God Hand</option>
-                                    <option value="godOfWar">God Of War</option>
+                <div>
+                    <h2>Tarification</h2>
+                    <div class="table-scroll">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>N°</th>
+                                    <th>Console</th>
+                                    <th>Jeux</th>
+                                    <th>Accessoire</th>
+                                    <th>Temps</th>
+                                    <th>Prix</th>    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>PS4</td>
+                                    <td>
+                                        <select name="jeuxTable" id="jeuxTable">
+                                            <option value="fc26">FC26</option>
+                                            <option value="gta5">GTA v</option>
+                                            <option value="mk11">Mortal Kombat 11</option>
+                                            <option value="box">Box (VR obligatoire)</option>
+                                            <option value="jeuxHauteur">Jeux de Hauteur (VR obligatoire)</option>
+                                            <option value="bestBear">Best Bear (VR obligatoire)</option>
+                                            <option value="tirMove">Jeux de Tir (VR obligatoire)</option>
+                                            <option value="courseVoiture">Course de Voiture</option>
+                                            <option value="courseVelo">Course de Velo</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="accessoireTablePs4" id="accessoireTablePs4">
+                                            <option value="2Manette">2 Manette</option>
+                                            <option value="4Manette">4 Mannette</option>
+                                            <option value="psvr">Caste VR + Manette</option>
+                                            <option value="psvrMotion">Caste VR + Motion Controller</option>
+                                            <option value="motionController">Motion Controller</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input type="number" value="5" min="5" max="100" id="minutePs4"> <label for="numberPs4">Minutes</label>
+                                    </td>
+                                    <td id="totalTablePs4" style="font-weight: bold;"></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>2</td>
+                                    <td>PS2</td>
+                                    <td>
+                                        <select name="jeuxTable2" id="jeuxTable2">
+                                            <option value="pes25">PES25</option>
+                                            <option value="gta">GTA San Adreas</option>
+                                            <option value="courseVelo">Course de Velo</option>
+                                            <option value="courseVoiture">Course de Voiture</option>
+                                            <option value="godHand">God Hand</option>
+                                            <option value="godOfWar">God Of War</option>
 
-                                </select>
-                            </td>
-                            <td>
-                                <select name="accessoireTablePs2" id="accessoireTablePs2">
-                                    <option value="1Manette">1 Manette</option>
-                                    <option value="2Manette">2 Mannette</option>
-                                </select>
-                            </td>
-                            <td>
-                                <input type="number" value="10" min="10" max="100" id="minutePs2"> <label for="numberPs2">Minute</label>
-                            </td>
-                            <td id="totalTablePs2" style="font-weight: bold;"></td>
-                        </tr>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="accessoireTablePs2" id="accessoireTablePs2">
+                                            <option value="1Manette">1 Manette</option>
+                                            <option value="2Manette">2 Mannette</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input type="number" value="10" min="10" max="100" id="minutePs2"> <label for="numberPs2">Minute</label>
+                                    </td>
+                                    <td id="totalTablePs2" style="font-weight: bold;"></td>
+                                </tr>
 
-                        
-                    </tbody>
-                </table>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- <div class="bgame">
+                        <h3>BGAME</h3>
+                        <p>Le meilleur espace de jeux en ville.</p>
+                        <div class="image-testimonial">
+                            <img src="img/LOGO BGAME.png" alt="Logo Bgame" height="80" width="200">
+                            <img src="img/GAMING ZONE.png" alt="">
+                            <img src="img/creed-vr.jpg" alt="">
+                        </div>
+                    </div> -->
+                </div>
             </div>
             <form action="" method="post">
                 <h2>Réservation</h2>
@@ -211,20 +226,22 @@
         <footer>
             <div class="footer-links">
                 <div class="socials">
-                    <a href="#"><img src="img/facebook.png" alt="facebook" height="30" width="30"></a>
-                    <a href="#"><img src="img/instagram.png" alt="instagram" height="30" width="30"></a>
-                    <a href="#"><img src="img/twitter.png" alt="twitter" height="30" width="30"></a>
-                    <a href="#"><img src="img/linkedin.png" alt="linkedin" height="30" width="30"></a>
+                    <a href="#"><i class="fi fi-brands-facebook"></i></a>
+                    <a href="#"><i class="fi fi-brands-instagram"></i></a>
+                    <a href="#"><i class="fi fi-brands-twitter"></i></a>
+                    <a href="#"><i class="fi fi-brands-linkedin"></i></a>
                 </div>
-                <div>
-                    <a href="index.html">Home</a>
-                    <a href="games.html">Games</a>
-                    <a href="reserve.html">Réservation</a>
-                    <a href="about.html">About us</a>
+                <hr>
+                <div class="nav-footer">
+                    <a href="index.html"> <i class="fi fi-rr-home"></i> Home</a>
+                    <a href="games.html"><i class="fi fi-rr-console-controller"></i> Jeux</a>
+                    <a href="reserve.html"><i class="fi fi-rr-reservation-smartphone"></i> Réservation</a>
+                    <a href="about.html"><i class="fi fi-rr-book-user"></i> À propos</a>
                 </div>
-                <div>
-                    <a href="https://wa.me/224627369541" class="whatsapp">Whatsapp</a>
-                    <a href="tel:+224627369541" class="tel">Téléphone</a>
+                <hr>
+                <div >
+                    <a href="https://wa.me/224627369541" class="whatsapp"><i class="fi fi-brands-whatsapp"></i> Whatsapp</a>
+                    <a href="tel:+224627369541" class="tel"><i class="fi fi-rr-phone-call"></i> Téléphone</a>
                 </div>
             </div>
             &copy; BGAME tous droit réserver
