@@ -375,12 +375,78 @@ font-weight: bold;
     font-size: 15px;
 }
 
-
-
 footer {
     width: 100%;
     height: 150px;
     background-color: #111922;
     color: white;
     margin-top: 20px;
+}
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+footer div {
+    width: 30%;
+}
+footer h3 {
+    margin-bottom: 10px;
+}
+footer a {
+    color: white;
+}
+footer a:hover {
+    color: #3FA9F5;
+}
+footer p {
+    margin-top: 10px;
+}
+footer .socials a {
+    margin-right: 10px;
+    font-size: 20px;
+}
+footer .socials a:hover {
+    color: #3FA9F5;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+    
+    .hero > * {
+        width: 100%;
+    }
+    
+    .jeux, .material {
+        flex-direction: column;
+    }
+    
+    .jeux > div, .material > div {
+        width: 100%;
+        height: auto;
+    }
+    
+    .infoForm {
+        flex-direction: column;
+    }
+    
+    .infoForm .info, .infoForm form {
+        width: 100%;
+    }
+}
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .liste-nav-header {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
