@@ -2,7 +2,22 @@ let mode = document.getElementById('mode')
 let body = document.getElementById('body')
 let saveTheme = localStorage.getItem("theme")
 let start = document.getElementById('start')
+let menuBtn = document.getElementById('menu-btn')
+let menuBtn2 = document.getElementById('menu-btn2')
+let menu = document.querySelector('.menu')
+let navHeader = document.querySelector('.nav-header')
+let header = document.querySelector('header')
+let bandMenu = document.querySelector('.band-menu')
 updateMode()
+
+menuBtn.addEventListener('click', () => {
+    menu.style.left = "0"
+    menu.style.transition = "0.5s";
+})
+menuBtn2.addEventListener('click', () => {
+    menu.style.left = "-50%"
+    menu.style.transition = "0.5s";
+})
 
 
 if (saveTheme === "light") {

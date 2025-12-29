@@ -50,6 +50,29 @@ body::-webkit-scrollbar {
 .star:hover {
     background-color: var(--dark);
 }
+.logo-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: var(--primary);
+    z-index: 2000;
+    padding: 20px;
+    left: -50%;
+}
+.band-menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 
 /* =========================
    HEADER (MOBILE)
@@ -78,11 +101,26 @@ header a {
   display: none;
 }
 
+.menu-hidden {
+  display: none;
+}
 .nav-header ul {
   display: flex;
   /* flex-direction: column; */
   gap: 15px;
 }
+
+.menu .nav-header ul {
+    flex-direction: column;
+    justify-self: start;
+}
+.menu .nav-header ul li {
+    border-bottom: 1px solid var(--dark);
+}
+.menu .nav-header ul li a {
+    color: var(--text);
+}
+
 
 .btn-header {
   display: flex;
@@ -266,16 +304,19 @@ footer {
 }
 
 .footer-links a {
-  color: var(--dark);
+  color: #ffffff;
 }
 
 /* =========================
    DESKTOP & TABLET
 ========================= */
 @media (min-width: 768px) {
-    .hidden {
+    .hidden, .menu-hidden {
     display: inline;
 }
+    .menu-icon, .menu {
+    display: none;
+    }
   header {
     flex-direction: row;
     justify-content: space-between;
