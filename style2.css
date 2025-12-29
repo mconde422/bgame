@@ -39,6 +39,17 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+.star {
+    background-color: var(--secondary);
+    border: 1px solid var(--dark);
+    padding: 8px 12px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: bold;
+}
+.star:hover {
+    background-color: var(--dark);
+}
 
 /* =========================
    HEADER (MOBILE)
