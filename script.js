@@ -8,7 +8,9 @@ let menu = document.querySelector('.menu')
 let navHeader = document.querySelector('.nav-header')
 let header = document.querySelector('header')
 let bandMenu = document.querySelector('.band-menu')
+let btnMoreGame = document.querySelector('.more-game')
 updateMode()
+
 
 menuBtn.addEventListener('click', () => {
     menu.style.left = "0"
@@ -134,7 +136,9 @@ const today = new Date().toISOString().split('T')[0]
 inputDate.value = today;
 inputDate.min = today;
 
-
+btnMoreGame.addEventListener('click', () => {
+    window.location.href = "games.html"
+})
 
 
 

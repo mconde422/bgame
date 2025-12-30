@@ -306,6 +306,17 @@ footer {
 .footer-links a {
   color: #ffffff;
 }
+/* =========================
+    GAME PAGE
+========================= */
+#title-Game-Ps4 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: var(--secondary);
+    border-radius: var(--radius);
+}
 
 /* =========================
    DESKTOP & TABLET
@@ -341,7 +352,7 @@ footer {
   .jeux,
   .material {
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     gap: 10px;
@@ -353,15 +364,15 @@ footer {
   }
 
   .infoForm {
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .info {
-    width: 70%;
+    width: 100%;
   }
 
   form {
-    width: 30%;
+    width: 100%;
   }
 
   .footer-links {
@@ -376,6 +387,17 @@ footer {
 
   .table-scroll table {
     min-width: 100%;
+  }
+   .infoForm {
+    flex-direction: row;
+  }
+
+  .info {
+    width: 70%;
+  }
+
+  form {
+    width: 30%;
   }
 
 }
