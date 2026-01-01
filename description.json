@@ -1,0 +1,101 @@
+{ 
+    "ps4" : {
+        "fc26": {
+            "title": "FC26",
+            "image": "img/ea-sports-fc-26-devrait-sortir-le-26-septembre-prochain-cover68778afd733aa.jpg",
+            "description": "Jeu de football réaliste nouvelle génération.",
+            "price": "5000 FG / heure"
+        },
+        "gta5": {
+            "title": "GTA V",
+            "image": "img/gta5.jpg",
+            "description": "Jeu d'aventure et de combat en monde ouvert.",
+            "price": "5000 FG / heure"
+        },
+        "mk11": {
+            "title": "Mortal Kombat 11",
+            "image": "img/Mortal_Kombat_11_cover_art.png",
+            "description": "Jeu de combat intense avec des combinaisons uniques.",
+            "price": "5000 FG / heure"
+        },
+        "box": {
+            "title": "Creed Rise to Glory",
+            "image": "img/box.jpg",
+            "description": "Jeu d'aventure et de combat inspiré par les films de la franchise.",
+            "price": "5000 FG / heure"
+        },
+        "jeuxHauteur": {
+            "title": "Richi's Experience",
+            "image": "img/hauteur.jpg",
+            "description": "Jeu d'aventure en 3D avec des environnements immersifs.",
+            "price": "5000 FG / heure"
+        },
+        "bestBear": {
+            "title": "Beat Saber",
+            "image": "img/beat.jpg",
+            "description": "Jeu musical basé sur la musique et le mouvement.",
+            "price": "5000 FG / heure"
+        },
+        "tirMove": {
+            "title": "SuperHot",
+            "image": "img/superhot.jpg",
+            "description": "",
+            "price": ""
+        },
+        "courseVoiture": {
+            "title": "Gran Turismo Sport",  
+            "image": "img/gran tourrismo.jpg",
+            "description": "Jeu de course réaliste avec une grande variété de véhicules.",
+            "price": "5000 FG / heure"  
+        },
+        "courseVelo": {
+            "title": "Tour de France 2020",
+            "image": "img/velo.jpg",
+            "description": "Jeu de simulation de cyclisme avec des parcours réalistes.",
+            "price": "5000 FG / heure"
+        }
+        
+    },
+    "ps2" : {
+        "pes25": {
+            "title": "PES 2025",
+            "image": "img/ps2 pes25.jpg",
+            "description": "Jeu de simulation de cyclisme avec des parcours réalistes.",
+            "price": "5000 FG / heure"
+        },
+        "gta": {
+            "title": "GTA San Andreas",
+            "image": "img/GTA SA.jpg",
+            "description": "Jeu d'aventure en monde ouvert avec des missions variées.",
+            "price": "5000 FG / heure"
+        },
+        "courseVeloPs2": {
+            "title": "Course de Velo",
+            "image": "img/ps2 velo.jpg",
+            "description": "Jeu de simulation de cyclisme avec des parcours réalistes.",
+            "price": "5000 FG / heure"
+        },
+        "courseVoiturePs2": {
+            "title": "Need of Speed 2",
+            "image": "img/Need of speed.jpg",
+            "description": "Jeu de course réaliste avec une grande variété de véhicules.",
+            "price": "5000 FG / heure"
+        },
+        "godHand": {
+            "description": "Jeu d'aventure et de combat inspiré par les films de la franchise.",
+            "price": "5000 FG / heure"
+        },
+        "godOfWar": {
+            "title": "God of War",
+            "image": "img/god of war.jpg",
+            "description": "Jeu d'aventure et de combat inspiré par les films de la franchise.",
+            "price": "5000 FG / heure"
+        },
+        "cod": {
+            "title": "Call of Duty",
+            "image": "img/Call of duty.jpg",
+            "description": "Jeu d'aventure et de combat inspiré par les films de la franchise.",
+            "price": "5000 FG / heure"
+        }
+    }
+}
