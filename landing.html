@@ -1,45 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="img/GAMING ZONE.png" type="image/x-icon">
-    <title>BGAME</title>
-    <style>
-        .landImg{
-            width: 100%;
-            text-align: center;
-        }
-        .landImg img{
-            height: 35%;
-            width: 35%;
-            object-fit: cover;
-            animation: rotateLogo 3s ease-out infinite;
-            margin-bottom: 10px;
-        }
-        h1 {
-            font-size: 3em;
-        }
-        @keyframes rotateLogo {
-            from{
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style2.css">
+  <link rel="shortcut icon" href="img/GAMING ZONE.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>BGAME — Espace de jeux</title>
+  <style>
+    .landing {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .landing::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 50% at 50% 0%, var(--accent-glow), transparent 60%);
+      pointer-events: none;
+    }
+    .landing-inner { position: relative; z-index: 1; }
+    .land-logo {
+      width: min(42vw, 200px);
+      height: auto;
+      margin-bottom: 24px;
+      animation: landFloat 4s ease-in-out infinite;
+    }
+    @keyframes landFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+    .landing h1 {
+      font-size: clamp(1.75rem, 5vw, 2.75rem);
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+    .landing h1 span { color: var(--accent); }
+    .landing p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 28px;
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .land-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-dim));
+      color: var(--bg);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .land-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px var(--accent-glow);
+    }
+  </style>
 </head>
 <body id="body">
-
-    <div class="landImg">
-        <img src="img/GAMING ZONE.png" alt="Logo" class="logo">
-        <h1>Bienvenue Sur BGame ...</h1>
-        <button type="button" class="start" id="start"><a href="index.html">COMMENCER</a></button>
+  <main class="landing">
+    <div class="landing-inner">
+      <img src="img/GAMING ZONE.png" alt="BGAME" class="land-logo">
+      <h1>Bienvenue sur <span>BGAME</span></h1>
+      <p>Le meilleur espace de jeux en ville. PS4, PS2, VR — réservez et jouez.</p>
+      <a href="index.html" class="land-cta" id="start">Entrer</a>
     </div>
-
-
-        <script src="script.js"></script>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>

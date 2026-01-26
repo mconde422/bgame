@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style2.css">
+  <link rel="shortcut icon" href="img/GAMING ZONE.png" type="image/x-icon">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css'>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <title>Réservation — BGAME</title>
+  <style>
+    .map-qr-section { margin-top: 40px; width: 100%; }
+    .map-qr-section h2 { font-size: 1.15rem; margin-bottom: 12px; text-align: center; }
+    .map-qr-wrap { display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start; justify-content: center; }
+    #map-reserve { width: 100%; min-width: 260px; flex: 1; height: 260px; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); }
+    .qr-wrap { background: var(--bg-card); padding: 16px; border-radius: var(--radius-lg); border: 1px solid var(--border); text-align: center; }
+    .qr-wrap p { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px; max-width: 180px; }
+    .qr-wrap img { width: 160px; height: 160px; display: block; margin: 0 auto; }
+    .qr-wrap a { font-size: 0.8rem; color: var(--accent); margin-top: 6px; display: inline-block; }
+  </style>
+</head>
+<body id="body">
+  <div class="menu">
+    <div class="menu-icon"><i class="fi fi-rr-octagon-xmark" id="menu-btn2"></i></div>
+    <div class="band-menu">
+      <p><img src="img/LOGO BGAME.png" alt="BGAME" width="160"><br>Le meilleur espace de jeux en ville.</p>
+      <nav class="nav-header">
+        <ul class="liste-nav-header">
+          <li><a href="index.html" class="logo-text"><i class="fi fi-rr-home"></i><span>Home</span></a></li>
+          <li><a href="games.html" class="logo-text"><i class="fi fi-rr-console-controller"></i><span>Jeux</span></a></li>
+          <li><a href="reserve.html" class="logo-text"><i class="fi fi-rr-reservation-smartphone"></i><span>Réservation</span></a></li>
+          <li><a href="about.html" class="logo-text"><i class="fi fi-rr-book-user"></i><span>À propos</span></a></li>
+          <li><a href="localisation.html" class="logo-text"><i class="fi fi-rr-map-marker"></i><span>Nous trouver</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <header>
+    <div class="menu-icon"><i class="fi fi-rr-menu-burger" id="menu-btn"></i></div>
+    <div class="img-logo"><a href="landing.html">BGAME</a></div>
+    <nav class="nav-header menu-hidden">
+      <ul class="liste-nav-header">
+        <li><a href="index.html" class="logo-text"><i class="fi fi-rr-home"></i><span class="hidden">Home</span></a></li>
+        <li><a href="games.html" class="logo-text"><i class="fi fi-rr-console-controller"></i><span class="hidden">Jeux</span></a></li>
+        <li><a href="reserve.html" class="logo-text"><i class="fi fi-rr-reservation-smartphone"></i><span class="hidden">Réservation</span></a></li>
+        <li><a href="about.html" class="logo-text"><i class="fi fi-rr-book-user"></i><span class="hidden">À propos</span></a></li>
+        <li><a href="localisation.html" class="logo-text"><i class="fi fi-rr-map-marker"></i><span class="hidden">Nous trouver</span></a></li>
+      </ul>
+    </nav>
+    <div class="btn-header">
+      <button type="button" class="whatsapp"><a href="https://wa.me/224627369541" class="logo-text"><i class="fi fi-brands-whatsapp"></i><span class="hidden">WhatsApp</span></a></button>
+      <button type="button" class="tel"><a href="tel:+224627369541" class="logo-text"><i class="fi fi-rr-phone-call"></i><span class="hidden">Téléphone</span></a></button>
+    </div>
+    <button type="button" id="mode" class="star" aria-label="Thème"><i class="fi fi-rr-sun"></i></button>
+  </header>
+
+  <section class="sect-1">
+    <h1 style="font-size: 2rem; margin-bottom: 24px; text-align: center;">Réserver une session</h1>
+    <p style="text-align: center; color: var(--text-muted); margin-bottom: 32px; max-width: 560px; margin-left: auto; margin-right: auto;">
+      Choisissez votre console, vos jeux et votre créneau. Le montant est calculé automatiquement.
+    </p>
+
+    <div class="infoForm" style="max-width: 900px; margin: 0 auto;">
+      <div class="info" style="flex: 1;">
+        <h2>Tarification</h2>
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>N°</th>
+                <th>Console</th>
+                <th>Jeux</th>
+                <th>Accessoire</th>
+                <th>Temps</th>
+                <th>Prix</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>PS4</td>
+                <td>
+                  <select name="jeuxTable" id="jeuxTable">
+                    <option value="fc26">FC26</option>
+                    <option value="gta5">GTA V</option>
+                    <option value="mk11">Mortal Kombat 11</option>
+                    <option value="box">Box (VR)</option>
+                    <option value="jeuxHauteur">Jeux Hauteur (VR)</option>
+                    <option value="bestBear">Beat Saber (VR)</option>
+                    <option value="tirMove">Super Hot (VR)</option>
+                    <option value="courseVoiture">Course Voiture</option>
+                    <option value="courseVelo">Course Vélo</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="accessoireTablePs4" id="accessoireTablePs4">
+                    <option value="2Manette">2 Manettes</option>
+                    <option value="4Manette">4 Manettes</option>
+                    <option value="psvr">Casque VR + Manette</option>
+                    <option value="psvrMotion">Casque VR + Motion</option>
+                    <option value="motionController">Motion Controller</option>
+                  </select>
+                </td>
+                <td>
+                  <input type="number" value="5" min="5" max="100" id="minutePs4"> <label for="minutePs4">min</label>
+                </td>
+                <td id="totalTablePs4" style="font-weight: bold;"></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>PS2</td>
+                <td>
+                  <select name="jeuxTable2" id="jeuxTable2">
+                    <option value="pes25">PES25</option>
+                    <option value="gta">GTA San Andreas</option>
+                    <option value="courseVelo">Course Vélo</option>
+                    <option value="courseVoiture">Course Voiture</option>
+                    <option value="godHand">God Hand</option>
+                    <option value="godOfWar">God Of War</option>
+                  </select>
+                </td>
+                <td>
+                  <select name="accessoireTablePs2" id="accessoireTablePs2">
+                    <option value="1Manette">1 Manette</option>
+                    <option value="2Manette">2 Manettes</option>
+                  </select>
+                </td>
+                <td>
+                  <input type="number" value="10" min="10" max="100" id="minutePs2"> <label for="minutePs2">min</label>
+                </td>
+                <td id="totalTablePs2" style="font-weight: bold;"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <form action="" method="post" style="flex: 0 0 360px;">
+        <h2>Réservation</h2>
+        <label for="console">Console</label>
+        <select name="console" id="console" required>
+          <option value="">— Choisir —</option>
+          <option value="ps4">PlayStation 4</option>
+          <option value="ps2">PlayStation 2</option>
+        </select>
+        <label for="jeux">Jeu</label>
+        <select name="jeux" id="jeux" required>
+          <option value="">— Choisir —</option>
+          <option value="fc26">FC26</option>
+          <option value="gta5">GTA 5</option>
+          <option value="mk11">Mortal Kombat 11</option>
+          <option value="box">Creed VR</option>
+          <option value="bestBear">Beat Saber</option>
+          <option value="tirMove">SuperHot</option>
+          <option value="courseVoiture">Course voiture</option>
+          <option value="courseVelo">Course vélo</option>
+        </select>
+        <label for="accessoire">Accessoire</label>
+        <select name="accessoire" id="accessoire" required>
+          <option value="">— Choisir —</option>
+          <option value="2Manette">2 Manettes</option>
+          <option value="4Manette">4 Manettes</option>
+          <option value="psvr">PSVR</option>
+        </select>
+        <label for="nbreManette">Nombre de manettes</label>
+        <input type="number" name="nbreManette" id="nbreManette" min="1" max="4" value="1" required>
+        <label for="tempsJeux">Durée (minutes)</label>
+        <input type="number" name="tempsJeux" id="tempsJeux" min="5" max="180" value="30" required>
+        <label for="date">Date</label>
+        <input type="date" name="date" id="date" required>
+        <label for="heureArrive">Heure d'arrivée</label>
+        <input type="time" name="heureArrive" id="heureArrive" required>
+        <p id="totalReservation" style="color: var(--accent); font-weight: bold; margin: 12px 0;">Montant : —</p>
+        <p style="font-size: 0.85rem; color: var(--warn); margin-bottom: 16px;">Paiement à la réservation. Montant non remboursable.</p>
+        <button type="submit" class="reserver">Réserver</button>
+      </form>
+    </div>
+
+    <div class="map-qr-section">
+      <h2>Itinéraire & QR code</h2>
+      <div class="map-qr-wrap">
+        <div id="map-reserve"></div>
+        <div class="qr-wrap">
+          <p>Scannez pour ouvrir Google Maps et vous guider vers BGAME.</p>
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fwww.google.com%2Fmaps%2Fdir%2F%3Fapi%3D1%26destination%3D10.9300043%2C-14.2845698%26travelmode%3Ddriving" alt="QR Code — Itinéraire BGAME">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=10.9300043,-14.2845698&travelmode=driving" target="_blank" rel="noopener">Ouvrir Google Maps</a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-links">
+        <div class="socials"><h3>Réseaux sociaux</h3>
+          <a href="#"><i class="fi fi-brands-facebook"></i></a>
+          <a href="#"><i class="fi fi-brands-instagram"></i></a>
+          <a href="#"><i class="fi fi-brands-twitter"></i></a>
+          <a href="https://wa.me/224627369541"><i class="fi fi-brands-whatsapp"></i></a>
+        </div>
+        <div class="nav-footer"><h3>Liens utiles</h3>
+          <a href="index.html" class="logo-text"><i class="fi fi-rr-home"></i> Home</a>
+          <a href="games.html" class="logo-text"><i class="fi fi-rr-console-controller"></i> Jeux</a>
+          <a href="reserve.html" class="logo-text"><i class="fi fi-rr-reservation-smartphone"></i> Réservation</a>
+          <a href="about.html" class="logo-text"><i class="fi fi-rr-book-user"></i> À propos</a>
+          <a href="localisation.html" class="logo-text"><i class="fi fi-rr-map-marker"></i> Nous trouver</a>
+        </div>
+        <div><h3>Contact</h3>
+          <a href="https://wa.me/224627369541" class="whatsapp logo-text"><i class="fi fi-brands-whatsapp"></i> WhatsApp</a>
+          <a href="tel:+224627369541" class="tel logo-text"><i class="fi fi-rr-phone-call"></i> Téléphone</a>
+        </div>
+      </div>
+      &copy; BGAME — Tous droits réservés
+    </footer>
+  </section>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      var dest = [10.9300043, -14.2845698];
+      var el = document.getElementById('map-reserve');
+      if (!el) return;
+      var map = L.map('map-reserve').setView(dest, 14);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
+      var ico = L.divIcon({ className: '', html: '<span style="background:#00d4aa;color:#0a0e14;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;border:2px solid #fff;">🎮</span>', iconSize: [26,26], iconAnchor: [13,13] });
+      L.marker(dest, { icon: ico }).addTo(map).bindPopup('BGAME');
+    })();
+  </script>
+</body>
+</html>

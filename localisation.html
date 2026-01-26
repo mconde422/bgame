@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nous trouver — BGAME</title>
+  <link rel="shortcut icon" href="img/GAMING ZONE.png" type="image/x-icon">
+  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css">
+  <style>
+    .map-container { height:  min(70vh, 520px); width: 100%; }
+    .map-cta { margin-bottom: 24px; }
+    .map-cta p { color: var(--text-muted); margin-top: 8px; }
+  </style>
+</head>
+<body id="body">
+  <div class="menu">
+    <div class="menu-icon"><i class="fi fi-rr-octagon-xmark" id="menu-btn2"></i></div>
+    <div class="band-menu">
+      <p><img src="img/LOGO BGAME.png" alt="BGAME" width="160"><br>Le meilleur espace de jeux en ville.</p>
+      <nav class="nav-header">
+        <ul class="liste-nav-header">
+          <li><a href="index.html" class="logo-text"><i class="fi fi-rr-home"></i><span>Home</span></a></li>
+          <li><a href="games.html" class="logo-text"><i class="fi fi-rr-console-controller"></i><span>Jeux</span></a></li>
+          <li><a href="reserve.html" class="logo-text"><i class="fi fi-rr-reservation-smartphone"></i><span>Réservation</span></a></li>
+          <li><a href="about.html" class="logo-text"><i class="fi fi-rr-book-user"></i><span>À propos</span></a></li>
+          <li><a href="localisation.html" class="logo-text"><i class="fi fi-rr-map-marker"></i><span>Nous trouver</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <header>
+    <div class="menu-icon"><i class="fi fi-rr-menu-burger" id="menu-btn"></i></div>
+    <div class="img-logo"><a href="landing.html">BGAME</a></div>
+    <nav class="nav-header menu-hidden">
+      <ul class="liste-nav-header">
+        <li><a href="index.html" class="logo-text"><i class="fi fi-rr-home"></i><span class="hidden">Home</span></a></li>
+        <li><a href="games.html" class="logo-text"><i class="fi fi-rr-console-controller"></i><span class="hidden">Jeux</span></a></li>
+        <li><a href="reserve.html" class="logo-text"><i class="fi fi-rr-reservation-smartphone"></i><span class="hidden">Réservation</span></a></li>
+        <li><a href="about.html" class="logo-text"><i class="fi fi-rr-book-user"></i><span class="hidden">À propos</span></a></li>
+        <li><a href="localisation.html" class="logo-text"><i class="fi fi-rr-map-marker"></i><span class="hidden">Nous trouver</span></a></li>
+      </ul>
+    </nav>
+    <div class="btn-header">
+      <button type="button" class="whatsapp"><a href="https://wa.me/224627369541" class="logo-text"><i class="fi fi-brands-whatsapp"></i><span class="hidden">WhatsApp</span></a></button>
+      <button type="button" class="tel"><a href="tel:+224627369541" class="logo-text"><i class="fi fi-rr-phone-call"></i><span class="hidden">Téléphone</span></a></button>
+    </div>
+    <button type="button" id="mode" class="star" aria-label="Thème"><i class="fi fi-rr-sun"></i></button>
+  </header>
+
+  <section class="sect-1">
+    <div class="map-cta">
+      <h1>Nous trouver</h1>
+      <p>Activez votre position pour voir l’itinéraire jusqu’à BGAME. Cliquez sur « Me guider » pour ouvrir la navigation.</p>
+    </div>
+
+    <div class="map-section">
+      <div class="map-container" id="map"></div>
+      <div class="map-actions">
+        <button type="button" class="btn-map primary" id="btn-geoloc">
+          <i class="fi fi-rr-marker"></i> Ma position
+        </button>
+        <button type="button" class="btn-map primary" id="btn-guide">
+          <i class="fi fi-rr-signs-directions"></i> Me guider (Google Maps)
+        </button>
+        <button type="button" class="btn-map secondary" id="btn-route">
+          <i class="fi fi-rr-route"></i> Afficher l’itinéraire sur la carte
+        </button>
+      </div>
+      <p id="map-status" style="margin-top:12px;color:var(--text-muted);font-size:0.9rem;"></p>
+    </div>
+
+    <footer>
+      <div class="footer-links">
+        <div class="socials">
+          <h3>Réseaux sociaux</h3>
+          <a href="#"><i class="fi fi-brands-facebook"></i></a>
+          <a href="#"><i class="fi fi-brands-instagram"></i></a>
+          <a href="#"><i class="fi fi-brands-twitter"></i></a>
+          <a href="https://wa.me/224627369541"><i class="fi fi-brands-whatsapp"></i></a>
+        </div>
+        <div class="nav-footer">
+          <h3>Liens utiles</h3>
+          <a href="index.html" class="logo-text"><i class="fi fi-rr-home"></i> Home</a>
+          <a href="games.html" class="logo-text"><i class="fi fi-rr-console-controller"></i> Jeux</a>
+          <a href="reserve.html" class="logo-text"><i class="fi fi-rr-reservation-smartphone"></i> Réservation</a>
+          <a href="about.html" class="logo-text"><i class="fi fi-rr-book-user"></i> À propos</a>
+          <a href="localisation.html" class="logo-text"><i class="fi fi-rr-map-marker"></i> Nous trouver</a>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <a href="https://wa.me/224627369541" class="whatsapp logo-text"><i class="fi fi-brands-whatsapp"></i> WhatsApp</a>
+          <a href="tel:+224627369541" class="tel logo-text"><i class="fi fi-rr-phone-call"></i> Téléphone</a>
+        </div>
+      </div>
+      &copy; BGAME — Tous droits réservés
+    </footer>
+  </section>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+  <script src="script.js"></script>
+  <script src="map.js"></script>
+</body>
+</html>
